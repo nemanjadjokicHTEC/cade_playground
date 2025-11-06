@@ -8,4 +8,7 @@ Upoznati se sa teorijom svrhe build sistema i Bazela. Potrebno je napraviti Baze
 # DOCKER ZADATAK
 Upoznati se sa konceptom Dockera i docker fajlova. Kreirati docker fajl baziran na ubuntu koji sadrzi dva build stage-a. U prvom stage-u je potrebno buildati timestamp_provider. U drugom stage-u je potrebno uzeti samo binary timestamp_provider iz bazel-bin direktorija i postaviti ga na lokaciju tako da ga dummy_logger direktno moze pozvati prilikom pozivanja `bazel run //python:dummy_logger`. Prilikom pokretanja dobijenog docker image-a ova komanda se treba izvrsiti.
 
-Za prvi stage potrebno je obezbjediti Bazel kao dependency unutar image-a, dok je za drugi stage potreban Bazel i Python.
+Za prvi stage potrebno je obezbjediti Bazel kao dependency unutar image-a, dok je za drugi stage potreban Bazel i Python. Oba stage-a koriste ovaj github repo i potrebno ga je kopirati u image. Docker fajl je potrebno kreirati u docker direktoriju.
+
+### Napomene
+Izrada zadatka se radi na posebnom branchu kreiranom iz main-a. Prilikom zavrsetka zadatka potrebno je kreirati Pull Request na main sa tog brancha.
