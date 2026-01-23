@@ -7,4 +7,5 @@ py_binary(
     deps = [
         "//python/random_print_library:random_print_library",
     ],
+    visibility = ["//visibility:public"],
 )
